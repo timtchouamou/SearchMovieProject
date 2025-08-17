@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+/* let initialise everything*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+/* GENERAL SETTING */
+html {
+  scroll-behavior: smooth; /* To add scroll tool */
+}
+
+ul {
+  display: flex;
+}
+li {
+  list-style-type: none;
+  color: #000;
+}
+
+.purple {
+  color: #7342d6;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+padding: 24px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row__colum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ p {
+  line-height: 1.5;
+  
+ }
+
+.no-cursor {
+  cursor: none;
+}
+
+
+/*NAV*/
+
+
+#landing {
+  background-color: rgba(10, 7, 18, 0.1);
+ 
+
+}
+
+nav {
+  background-image: url(asset/movie4.jpeg);
+  background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+  height: 500px;
+}
+
+.nav__container {
+   display: flex;
+   width: 100%;
+   max-width: 1200px;
+   padding: 0 24px;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+
+}
+
+ .nav__block-logo--title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   }
+
+.nav__logo {
+  width: 160px;
+  height: 80px;
+}
+
+.nav__logo--title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/*.nav__links {}*/
+
+.nav__link {
+  margin-left: 16px;
+  color: #151515;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: bold;
+}
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link--primary {
+  border: 2px solid #7342d6;
+  border-radius: 4px;
+
+}
+
+
+.nav__link--primary:hover {
+  text-decoration: none;
+}
+
+a.btn-contact {
+    display: flex
+;
+    cursor: pointer;
+    max-height: 48px;
+    min-height: 48px;
+    padding: 12px 40px;
+    align-items: center;
+    border: 2px #5d3eff;
+    border-radius: 50px;
+    background-color: #6030b1;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .35s ease;
+}
+
+/* THIS IS FOR THE MODAL MENU */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+   color: #7342d6;
+   display: none; 
+}
+
+.menu__backdrop {
+  border: 2px solid red;
+  position: absolute; /* this to make position normal */
+  background-color: black;
+  top: 0;
+  left: 0;
+ width: 100vw;
+height: 100vh;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+display: none;
+/* for animation */
+transition: all 30ms ease;
+opacity: 0;
+visibility: hidden;
+
+}
+
+.menu--open .menu__backdrop{
+  display: flex;
+  /* for animation */
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu--open { /* thsi is to only see the menu open on the screen */
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__link {
+  color: white;
+  font-size: 40px;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: rgb(11, 11, 141);
+    }
+    .search-bar {
+      text-align: center;
+      margin-top: 200px;
+      font-weight: bold;
+      font-size: 60px;
+    }
+
+
+      input, button, select {
+      padding: 8px;
+      margin: 5px;
+    }
+
+
+     button, select {
+      border-radius: 20%;
+    }
+    
+
+    button, select {
+      color: rgb(241, 241, 245);
+      background-color: rgb(41, 8, 141);
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+  
+
+    /* IF WE DONT WANT TO SHOW THE MENU, ADD THE BREAK POINT */
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
+  .btn__menu {
+    display: block; /* only display it with max-width = 550px */
+  }
+  .highlight {
+    width: 100%;
+
+  }
+  .highlight:not(:last-child) {
+     margin-bottom: 24px;
+  }
+}
