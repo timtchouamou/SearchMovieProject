@@ -278,4 +278,19 @@ visibility: hidden;
   .highlight:not(:last-child) {
      margin-bottom: 24px;
   }
+    .search-bar {
+      text-align: center;
+      margin-top: 300px;
+      font-weight: bold;
+      font-size: 60px;
+    }
+     h1 {
+      text-align: center;
+      color: rgb(59, 11, 141);
+      font-size: 30px;
+    }
+
+      input, button, select {
+      gap: 1px;
+    }
 }
